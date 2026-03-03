@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Syncs - ECEC</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&family=Space+Mono:wght@400;700&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
+
+    <div id="scroll-progress"></div>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">ECEC</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About & People</a>
+            <a href="teams.html">Teams</a>
+            <a href="competitions.html">Competitions</a>
+            
+            <div class="nav-dropdown">
+                <a href="events.html" class="active">Events ▾</a>
+                <div class="dropdown-content">
+                    <a href="weekly.html">Weekly Syncs</a>
+                    <a href="events.html#upcoming">Live Feed</a>
+                </div>
+            </div>
+            <a href="contact.html" class="cta-link">Join Us</a>
+        </div>
+        <div class="mobile-menu-btn">☰</div>
+    </nav>
+
+    <main>
+        <canvas id="particle-canvas"></canvas>
+        <header class="events-hero">
+            <div class="hero-content">
+                <span class="status-live">● RECURRING_UPLINK</span>
+                <h1>Weekly Syncs</h1>
+                <p>Consistent touchpoints for the collective. Join us every Tuesday to sync on hardware, software, and club operations.</p>
+                <div class="hero-stats">
+                    <div class="stat"><span class="num">04</span><span class="label">Meetings/Mo</span></div>
+                    <div class="stat"><span class="num">19:00</span><span class="label">Time (EST)</span></div>
+                    <div class="stat"><span class="num">VOIP</span><span class="label">Platform</span></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="events-list-section">
+            <div class="section-title">
+                <h2>The Weekly Loop</h2>
+                <div class="glitch-line"></div>
+            </div>
+
+            <div class="events-container">
+                <div class="event-row">
+                    <div class="event-date">
+                        <span class="day">TUE</span>
+                        <span class="month">WEEKLY</span>
+                    </div>
+                    <div class="event-details">
+                        <div class="event-badge workshop">VIRTUAL_SYNC</div>
+                        <h3>General Discord Assembly</h3>
+                        <p class="location">📍 Discord Voice Channel • 7:00 PM</p>
+                        <p class="desc">The pulse of the club. We discuss sub-team progress (XR, Neurotech, ASIC), share technical blockers, and coordinate for upcoming competitions.</p>
+                    </div>
+                    <div class="event-action">
+                        <a href="#" class="rsvp-btn">JOIN DISCORD ></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+<div id="loader">
+    <div class="loader-content">
+        <h1 class="glitch-text">ECEC</h1>
+        <div class="progress-bar"><div class="progress-fill"></div></div>
+        <div class="loader-status">
+            <span>INITIALIZING SYSTEM...</span>
+            <span id="loader-percent">0%</span>
+        </div>
+    </div>
+</div>
+
+<div id="scroll-progress"></div>
+</html>

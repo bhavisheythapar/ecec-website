@@ -30,21 +30,27 @@
     <!-- Scroll Progress Line -->
     <div id="scroll-progress"></div>
 
-    <!-- Navbar -->
     <nav class="navbar">
         <a href="index.html" class="nav-logo">ECEC</a>
         <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About & People</a>
             <a href="teams.html">Teams</a>
             <a href="competitions.html">Competitions</a>
-            <a href="events.html">Events</a>
+            
+            <div class="nav-dropdown">
+                <a href="events.html">Events ▾</a>
+                <div class="dropdown-content">
+                    <a href="weekly.html">Weekly Syncs</a>
+                    <a href="events.html#upcoming">Live Feed</a>
+                </div>
+            </div>
             <a href="contact.html" class="cta-link">Join Us</a>
         </div>
         <div class="mobile-menu-btn">☰</div>
     </nav>
 
-    <!-- Hero Section -->
+        <!-- Hero Section -->
     <header class="hero">
         <canvas id="particle-canvas"></canvas>
         <div class="hero-content">

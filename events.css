@@ -1,4 +1,4 @@
-/* Events Page Styling */
+/* events.css - Final Updated Version */
 
 :root {
     --font-mono: 'Space Mono', monospace;
@@ -57,11 +57,16 @@ main {
 .stat .num { font-family: var(--font-heading); font-size: 2.5rem; color: #fff; }
 .stat .label { font-family: var(--font-mono); font-size: 0.8rem; color: #666; text-transform: uppercase; }
 
-/* Events List */
+/* Events List Sections */
 .events-list-section {
     padding: 4rem 2rem;
     max-width: 1000px;
     margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.events-list-section:last-of-type {
+    border-bottom: none;
 }
 
 .section-title {
@@ -76,6 +81,8 @@ main {
     font-size: 2rem;
     color: #fff;
     white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .glitch-line {
@@ -88,7 +95,7 @@ main {
 /* Event Row (Ticket Style) */
 .event-row {
     display: grid;
-    grid-template-columns: 80px 1fr 120px;
+    grid-template-columns: 100px 1fr 140px; /* Adjusted for wider date box */
     gap: 2rem;
     padding: 2rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -98,13 +105,13 @@ main {
 
 .event-row:hover {
     background: rgba(255, 255, 255, 0.02);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     border-radius: 8px;
     border-bottom-color: transparent;
 }
 
-/* Date Box */
+/* Date Box - Optimized for "TUE" and "WEEKLY" */
 .event-date {
     display: flex;
     flex-direction: column;
@@ -113,22 +120,28 @@ main {
     background: #111;
     border: 1px solid #333;
     border-radius: 8px;
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
+    flex-shrink: 0;
+    padding: 5px;
 }
 
 .event-date .day {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 1.4rem; /* Sized for 3-letter abbreviations */
     color: #fff;
     line-height: 1;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
 .event-date .month {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     color: var(--neon-blue);
     text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 1px;
 }
 
 /* Details */
@@ -174,16 +187,18 @@ main {
     color: var(--neon-blue);
     text-decoration: none;
     border: 1px solid var(--neon-blue);
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1rem;
     border-radius: 4px;
     transition: 0.3s;
     display: inline-block;
     text-align: center;
+    font-size: 0.85rem;
 }
 
 .rsvp-btn:hover {
     background: var(--neon-blue);
     color: #000;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
 }
 
 /* Past Event State */
@@ -194,10 +209,11 @@ main {
     font-family: var(--font-mono);
     color: #444;
     border: 1px solid #333;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1rem;
     border-radius: 4px;
     display: block;
     text-align: center;
+    font-size: 0.85rem;
 }
 
 /* Gallery Grid */
@@ -262,10 +278,12 @@ main {
         grid-template-columns: 1fr;
         gap: 1rem;
         text-align: center;
+        padding: 2.5rem 0;
     }
     
-    .event-date { width: 100%; height: 50px; flex-direction: row; gap: 0.5rem; }
+    .event-date { width: 100%; height: 60px; flex-direction: row; gap: 0.8rem; }
     .event-date .day { font-size: 1.2rem; }
+    .event-date .month { margin-top: 0; }
     
     .event-action { width: 100%; }
     .rsvp-btn { display: block; width: 100%; }
