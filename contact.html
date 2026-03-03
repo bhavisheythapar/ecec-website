@@ -3,101 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECEC - Electrical & Computer Engineering Club</title>
+    <title>Contact Uplink - ECEC</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-
-    <!-- Loader -->
-    <div id="loader">
-        <div class="loader-content">
-            <h1 class="glitch-text" data-text="ECEC">ECEC</h1>
-            <div class="progress-bar"><div class="progress-fill"></div></div>
-            <div class="loader-status">
-                <span>INITIALIZING SYSTEM...</span>
-                <span id="loader-percent">0%</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scroll Progress Line -->
-    <div id="scroll-progress"></div>
 
     <!-- Navbar -->
     <nav class="navbar">
         <a href="index.html" class="nav-logo">ECEC</a>
         <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About & People</a>
             <a href="teams.html">Teams</a>
             <a href="competitions.html">Competitions</a>
             <a href="events.html">Events</a>
-            <a href="contact.html" class="cta-link">Join Us</a>
+            <a href="contact.html" class="active">Join Us</a>
         </div>
         <div class="mobile-menu-btn">☰</div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <canvas id="particle-canvas"></canvas>
-        <div class="hero-content">
-            <div class="hero-text-wrapper">
-                <h1>DESIGN. <span class="highlight">CONNECT.</span> INNOVATE.</h1>
-                <p>Where engineering meets community. Join TMU's hub for hardware, software, and embedded systems innovation.</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn primary">Join the Collective</a>
-                    <a href="teams.html" class="btn secondary">Explore Projects</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <main class="contact-main">
+        
+        <!-- Hero -->
+        <header class="contact-hero">
+            <h1>Initialize Uplink</h1>
+            <p>Ready to deploy? Whether you want to join a team, sponsor a project, or just say hello, this is your line to HQ.</p>
+        </header>
 
-        <!-- Features Grid -->
-    <section id="features" class="features-section">
-        <div class="container">
+        <div class="contact-grid">
             
-            <!-- Feature 1: Design Teams -->
-            <a href="teams.html" class="feature-card">
-                <div class="icon">🚀</div>
-                <h3>Design Squads</h3>
-                <p>Collaborate on long-term engineering projects. From autonomous robotics to full-stack apps.</p>
-                <span class="learn-more">View Teams →</span>
-            </a>
+            <!-- Left Column: The Terminal Form -->
+            <section class="form-container">
+                <div class="panel-header">
+                    <span class="panel-title">// TRANSMISSION_FORM</span>
+                    <div class="status-light"></div>
+                </div>
+                
+                <form class="uplink-form">
+                    <div class="input-group">
+                        <label>OPERATOR NAME</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>RETURN ADDRESS (EMAIL)</label>
+                        <input type="email" placeholder="student@torontomu.ca" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>DIRECTIVE (SUBJECT)</label>
+                        <select>
+                            <option>General Inquiry</option>
+                            <option>Join a Team</option>
+                            <option>Sponsorship Proposal</option>
+                            <option>Report a Bug</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>MESSAGE DATA</label>
+                        <textarea rows="6" placeholder="Type your message here..." required></textarea>
+                    </div>
 
-            <!-- Feature 2: Competitions -->
-            <a href="competitions.html" class="feature-card">
-                <div class="icon">⚔️</div>
-                <h3>The Arena</h3>
-                <p>Represent TMU in hackathons and design challenges. Test your skills under pressure.</p>
-                <span class="learn-more">See Events →</span>
-            </a>
+                    <button type="submit" class="submit-btn">
+                        <span>SEND TRANSMISSION</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+                    </button>
+                </form>
+            </section>
 
-            <!-- Feature 3: Workshops -->
-            <a href="events.html" class="feature-card">
-                <div class="icon">🛠️</div>
-                <h3>Skill Forge</h3>
-                <p>Hands-on workshops for soldering, PCB design, and coding. Level up your technical toolkit.</p>
-                <span class="learn-more">Join Workshop →</span>
-            </a>
+            <!-- Right Column: Info & Map -->
+            <aside class="info-sidebar">
+                
+                <!-- Quick Actions -->
+                <div class="social-matrix">
+                    <a href="#" class="matrix-btn discord">
+                        <span class="icon">👾</span>
+                        <div class="text">
+                            <span class="label">JOIN SERVER</span>
+                            <span class="value">Discord</span>
+                        </div>
+                    </a>
+                    <a href="#" class="matrix-btn instagram">
+                        <span class="icon">📸</span>
+                        <div class="text">
+                            <span class="label">FOLLOW FEED</span>
+                            <span class="value">Instagram</span>
+                        </div>
+                    </a>
+                    <a href="#" class="matrix-btn email">
+                        <span class="icon">✉️</span>
+                        <div class="text">
+                            <span class="label">DIRECT MAIL</span>
+                            <span class="value">Email Us</span>
+                        </div>
+                    </a>
+                </div>
 
-            <!-- Feature 4: Social Events -->
-            <a href="events.html" class="feature-card">
-                <div class="icon">👾</div>
-                <h3>Social Uplink</h3>
-                <p>Game nights, industry mixers, and pub socials. Connect with your cohort beyond the classroom.</p>
-                <span class="learn-more">Get Social →</span>
-            </a>
+                <!-- Location Block -->
+                <div class="location-block">
+                    <div class="panel-header">
+                        <span class="panel-title">// HQ_COORDINATES</span>
+                    </div>
+                    <div class="map-wrapper">
+                        <!-- Embedded Dark Mode Map (Filter applied in CSS) -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.4357285145717!2d-79.37943642352123!3d43.65989525197825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb35431c1395%3A0xe8413693fb57a021!2sGeorge%20Vari%20Engineering%20and%20Computing%20Centre!5e0!3m2!1sen!2sca!4v1708450000000!5m2!1sen!2sca" 
+                            allowfullscreen="" loading="lazy">
+                        </iframe>
+                        <div class="location-overlay">
+                            <p><strong>ENG LG05</strong><br>245 Church St<br>Toronto, ON</p>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- FAQ Mini -->
+                <div class="faq-mini">
+                    <h3>Common Queries</h3>
+                    <div class="faq-item">
+                        <p class="q">Is membership free?</p>
+                        <p class="a">Yes. Standard membership is open to all TMU students.</p>
+                    </div>
+                    <div class="faq-item">
+                        <p class="q">Can first years join teams?</p>
+                        <p class="a">Absolutely. We provide mentorship for new recruits.</p>
+                    </div>
+                </div>
+
+            </aside>
         </div>
-    </section>
-
+    </main>
 
         <!-- System Footer -->
     <footer class="sys-footer">
@@ -155,7 +198,6 @@
             
         </div>
     </footer>
-
 
     <script src="script.js"></script>
 </body>
